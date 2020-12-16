@@ -1,0 +1,69 @@
+unit uFunc;
+
+interface
+uses
+  FireDAC.Comp.Client, System.SysUtils, System.Types, IdHashMessageDigest,
+  System.UITypes, System.Classes, System.Variants, Data.DB, FireDAC.Stan.Param,
+  Vcl.StdCtrls, Vcl.Forms, Winapi.Windows, Vcl.ExtCtrls, StrUtils, Vcl.Grids,
+  DBGrids, Graphics, FireDAC.Stan.Intf, System.Win.ComObj, FireDAC.Stan.Option,FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, Winapi.Messages, Vcl.Dialogs, Vcl.Buttons,  TypInfo, Registry,
+  Vcl.Mask, Vcl.DBCtrls, IdBaseComponent, IdMessage, IdComponent, IdTCPConnection,
+  IdTCPClient, IdExplicitTLSClientServerBase, IdMessageClient, IdSMTPBase, ImageHlp, Vcl.Controls,  Shellapi,
+  IdSMTP, Datasnap.DBClient, Vcl.ComCtrls, Inifiles, DateUtils;
+
+Procedure AbrirForm(aClasseForm: TFormClass; aForm: TForm);
+procedure ZebrarGrid(Sender, DataSet: TObject; Rect: TRect; Column: TColumn; State: TGridDrawState);
+
+function Perguntar(Pergunta: String): Boolean;
+
+implementation
+
+Procedure AbrirForm(aClasseForm: TFormClass; aForm: TForm);
+begin
+  try
+    Application.CreateForm(aClasseForm, aForm);
+    aForm.ShowModal;
+  finally
+     FreeAndNil(aForm);
+  end;
+end;
+
+procedure ZebrarGrid(Sender, DataSet: TObject; Rect: TRect; Column: TColumn; State: TGridDrawState);
+begin
+  if not (DataSet as TDataSet).Active  then Exit;
+  if (DataSet as TDataSet).IsEmpty then Exit;
+
+  // se a célula está selecionada ou foi selecionada no multi-select
+  if (gdSelected in State) or ((Sender as TDBGrid).SelectedRows.CurrentRowSelected) then
+    begin
+      // define a cor de fundo do fundo
+      (Sender as TDBGrid).Canvas.Brush.Color := $00CFB78F;
+    end
+  else  // se a célula não está selecionada
+    begin
+      if not Odd((DataSet as TDataSet).RecNo) then // se for ímpar
+        begin
+          // define a cor de fundo
+          (Sender as TDBGrid).Canvas.Brush.Color := cl3DLight;
+        end
+      else
+        begin
+          // define a cor de fundo
+          (Sender as TDBGrid).Canvas.Brush.Color := clWindow;
+        end;
+    end;
+
+  (Sender as TDBGrid).Canvas.FillRect(Rect);
+  (Sender as TDBGrid).Canvas.TextOut(Rect.Left + 2,Rect.Top, Column.Field.AsString);
+end;
+
+function Perguntar(Pergunta: String): Boolean;
+begin
+  if Application.MessageBox(PChar(Pergunta), 'Teste InfoSistemas', MB_ICONQUESTION + MB_YESNO + MB_DEFBUTTON2) = idYes then
+    Result:= true
+  else
+    Result:= false;
+end;
+
+end.

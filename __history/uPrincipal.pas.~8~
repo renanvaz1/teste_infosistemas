@@ -1,0 +1,50 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.Menus;
+
+type
+  TfrmPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastro1: TMenuItem;
+    Sair1: TMenuItem;
+    Timer1: TTimer;
+    Status: TStatusBar;
+    Cliente1: TMenuItem;
+    procedure Timer1Timer(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
+    procedure Cliente1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses uFunc;
+
+procedure TfrmPrincipal.Cliente1Click(Sender: TObject);
+begin
+  AbrirForm(TfrmCadCliente, frmCadCliente);
+end;
+
+procedure TfrmPrincipal.Sair1Click(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TfrmPrincipal.Timer1Timer(Sender: TObject);
+begin
+  Status.Panels[0].Text := DateTimeToStr(Now);
+end;
+
+end.

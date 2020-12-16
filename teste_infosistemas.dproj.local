@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/19 14:12:23.000.586,=C:\Users\renangouvea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/12/16 07:05:46.000.883,=C:\Users\renangouvea\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/12/16 07:06:42.000.857,C:\Users\renangouvea\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\teste_infosistemas\uPrincipal.pas</Transaction>
+    <Transaction>2020/12/16 07:06:42.000.857,C:\Users\renangouvea\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\teste_infosistemas\uPrincipal.dfm</Transaction>
+    <Transaction>2020/12/16 07:06:54.000.320,C:\Users\renangouvea\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\teste_infosistemas\teste_infosistemas.dproj</Transaction>
+    <Transaction>2020/12/16 07:18:00.000.097,=C:\teste_infosistemas\Unit1.pas</Transaction>
+    <Transaction>2020/12/16 07:18:07.000.159,C:\teste_infosistemas\Unit1.pas=C:\teste_infosistemas\uFunc.pas</Transaction>
+    <Transaction>2020/12/16 07:21:19.000.063,=C:\teste_infosistemas\Unit1.pas</Transaction>
+    <Transaction>2020/12/16 07:21:33.000.205,C:\teste_infosistemas\Unit1.dfm=C:\teste_infosistemas\uCadCliente.dfm</Transaction>
+    <Transaction>2020/12/16 07:21:33.000.205,C:\teste_infosistemas\Unit1.pas=C:\teste_infosistemas\uCadCliente.pas</Transaction>
+    <Transaction>2020/12/16 07:23:26.000.721,=C:\teste_infosistemas\Unit1.pas</Transaction>
+    <Transaction>2020/12/16 07:23:32.000.798,C:\teste_infosistemas\Unit1.pas=C:\teste_infosistemas\uDM.pas</Transaction>
+    <Transaction>2020/12/16 07:23:32.000.798,C:\teste_infosistemas\Unit1.dfm=C:\teste_infosistemas\uDM.dfm</Transaction>
+    <Transaction>2020/12/16 07:40:51.000.733,=C:\teste_infosistemas\Unit1.pas</Transaction>
+    <Transaction>2020/12/16 07:40:59.000.394,C:\teste_infosistemas\Unit1.dfm=C:\teste_infosistemas\uListaCliente.dfm</Transaction>
+    <Transaction>2020/12/16 07:40:59.000.394,C:\teste_infosistemas\Unit1.pas=C:\teste_infosistemas\uListaCliente.pas</Transaction>
+  </Transactions>
+</BorlandProject>

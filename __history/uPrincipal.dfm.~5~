@@ -1,0 +1,52 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tela Principal'
+  ClientHeight = 596
+  ClientWidth = 455
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Status: TStatusBar
+    Left = 0
+    Top = 577
+    Width = 455
+    Height = 19
+    Panels = <
+      item
+        Width = 50
+      end>
+    ExplicitLeft = 168
+    ExplicitTop = 520
+    ExplicitWidth = 0
+  end
+  object MainMenu1: TMainMenu
+    Left = 232
+    Top = 368
+    object Cadastro1: TMenuItem
+      Caption = 'Cadastro'
+      object Cliente1: TMenuItem
+        Caption = 'Cliente'
+      end
+    end
+    object Sair1: TMenuItem
+      Caption = 'Sair'
+      OnClick = Sair1Click
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 224
+    Top = 192
+  end
+end

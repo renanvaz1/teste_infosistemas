@@ -1,0 +1,4 @@
+<Table Width="100%" Border=1>
+<TR><TH>Nome</TH><TH>Identidade</TH><TH>CPF</TH><TH>DDD</TH><TH>Telefone</TH><TH>Email</TH><TH>CEP</TH><TH>Logradouro</TH><TH>Numero</TH><TH>Complemento</TH><TH>Bairro</TH><TH>Cidade</TH><TH>Estado</TH><TH>Pais</TH></TR>
+<TR><TD>renan gouvea novais vaz</TD><TD>15792082</TD><TD>099.541.686-99</TD><TD>32</TD><TD>988592903</TD><TD>renanvaz1@gmail.com</TD><TD>36.880-149</TD><TD>Alameda Petunias</TD><TD>320</TD><TD>casa</TD><TD>Quinta das Flores</TD><TD>Muriae</TD><TD>MG</TD><TD>Brasil</TD></TR>
+</Table>
